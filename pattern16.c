@@ -2,29 +2,49 @@
 int main()
 {
     int i,j,n=5;
-    for(i=1;i<n-1;i++)
+    for(i=0;i<=n-3;i++)
     {
-        for(j=0;j<n-i;j++)
+        for(j=0;j<n-3-i;j++)
         {
             printf(" ");
         }
-        for(j=0;j<i;j++)
+        int k=i*2+1,a=1,b=k/2;
+        for(j=0;j<k;j++)
         {
-            printf("%d",j+1);
-        }
-        for(j=i-1;j>=1;j--)
-        {
-            printf("%d",j);
+            if(j<=k/2)
+            {
+                printf("%d",a);
+                a++;
+            }
+            else
+            {
+                printf("%d",b);
+                b--;
+            }
         }
         printf("\n");
     }
-    /*for(i=1;i<n-2;i++)
+    for(i=0;i<n-3;i++)
     {
-        for(j=0;j<i+1;j++)
+        for(j=0;j<=i;j++)
         {
             printf(" ");
-        }    
+        }
+        int k=n*2-2*(i+3)-1,a=1,b=k/2;
+        for(j=0;j<k;j++)
+        {
+            if(j<=k/2)
+            {
+                printf("%d",a);
+                a++;
+            }
+            else
+            {
+                printf("%d",b);
+                b--;
+            }
+        }
+        printf("\n");
     }
-    */
     return 0;
 }
